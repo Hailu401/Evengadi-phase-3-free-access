@@ -838,3 +838,48 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+/* hailu css added */
+/*marquee adjustment*/
+.marquee{
+    position: relative;
+    background-color: darkmagenta;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50px;
+    margin-top: 0;
+    overflow: hidden;
+}
+.marquee p{
+    position: absolute;
+    font-size:1.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    line-height: 50px;
+    color: beige;
+    /*starting position*/
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /*apply animation to this element*/
+    -moz-animation: marquee 15s linear infinite;
+    -webkit-animation: marquee 15s linear infinite;
+}
+/*to move or animate*/
+@-moz-keyframes marquee{
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes marquee{
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
